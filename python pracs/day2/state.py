@@ -4,4 +4,4 @@ city=city.lower()
 print(s[city])
 state=raw_input("Enter the state:")
 state=state.lower()
-print s.index(state)
+print s.keys()[s.values().index(state)]

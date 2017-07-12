@@ -1,7 +1,3 @@
-
-
-#print x,y,op
-
 def addition(x,y):
     print str(x)+"+"+str(y)+"= "+str(x+y)
 
@@ -18,9 +14,15 @@ def square(x,y):
     print str(x)+"**"+str(y)+"= "+str(x**y)
 t=1
 while(t!=0):
-    x = float(raw_input("Enter 1st no.:"))
-    y = float(raw_input("Enter 2nd no.:"))
+    x = input("Enter 1st no.:")
+    y = input("Enter 2nd no.:")
     op = raw_input("Enter operator(+,-,*,/,**):")
+    if((isinstance(x,str) or isinstance(y,str))):
+        print "not possible"
+        continue
+    else:
+        x = float(x)
+        y = float(y)
     if(op=="+"):
         addition(x,y)
     elif(op=="-"):
